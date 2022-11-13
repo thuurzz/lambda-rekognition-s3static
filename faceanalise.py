@@ -28,6 +28,23 @@ def cria_lista_faceId_detectadas(faces_detectadas):
   return faceId_detectadas
 
 
+def compara_imagens(faceId_detectadas):
+  resultado_comparacao = []
+  for ids in faceId_detectadas:
+    resultado_comparacao.append(
+      client.search_faces(
+        CollectionId='faces',
+        FaceId=ids,
+        MaxFaces=10,
+        FaceMatchThreshold=80
+      )
+    )
+  return resultado_comparacao
+   
+
 faces_detectadas = detecta_faces()
 faceId_detectadas = cria_lista_faceId_detectadas(faces_detectadas)
-print(faceId_detectadas)
+resultado_comparacao = compara_imagens(faceId_detectadas)
+print(json.dumps(
+  resultado_comparacao, indent=4
+))
