@@ -14,3 +14,5 @@ To do:
 
 Link do site:
 http://lambda-site-alura.s3-website-us-east-1.amazonaws.com
+
+![lambda-reko-s3](https://user-images.githubusercontent.com/53263896/201549350-867f2999-ce3f-4acd-a378-7ce157f68537.png)
