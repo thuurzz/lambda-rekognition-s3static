@@ -22,7 +22,7 @@ function montaTabela(dados) {
     tdInfoFoto.height = 100;
     tdInfoFoto.width = 68;
     tdInfoFoto.src =
-      "https://s3.amazonaws.com/lambda-imagens-alura/" + dados.nome + ".png";
+      "https://lambda-imagens-alura.s3.amazonaws.com/" + dados.nome + ".jpg";
 
     trTabela.appendChild(tdInfoFoto);
     trTabela.appendChild(tdInfoNome);
