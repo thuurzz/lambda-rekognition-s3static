@@ -9,6 +9,9 @@ $.ajax({
 });
 
 function montaTabela(dados) {
+  var img = document.querySelector("#imgAnalise");
+  img.src = "https://lambda-imagens-alura.s3.amazonaws.com/_analise.jpg";
+
   for (var dados of dados) {
     var trTabela = document.createElement("tr");
 
