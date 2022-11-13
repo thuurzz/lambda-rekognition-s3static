@@ -21,7 +21,13 @@ def detecta_faces():
   return faces_detectadas
 
 
+def cria_lista_faceId_detectadas(faces_detectadas):
+  faceId_detectadas = []
+  for imagem in range(len(faces_detectadas["FaceRecords"])):
+    faceId_detectadas.append(faces_detectadas["FaceRecords"][imagem]["Face"]["FaceId"])
+  return faceId_detectadas
+
+
 faces_detectadas = detecta_faces()
-print(json.dumps(
-  faces_detectadas, indent=4
-))
+faceId_detectadas = cria_lista_faceId_detectadas(faces_detectadas)
+print(faceId_detectadas)
